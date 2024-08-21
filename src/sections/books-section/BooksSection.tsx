@@ -1,8 +1,5 @@
 import React from 'react';
-
-import './BooksSection.css';
 import { Doughnuts, BendOfLuck, UnderwaterWelder } from '@assets/books';
-
 import { useBooksTranslations } from '@helpers/translations';
 
 const books = [
@@ -30,22 +27,29 @@ function BooksSection() {
     const { title, subTitle, inquireNow } = useBooksTranslations();
 
     return (
-        <section className="books-section">
-            <h2>{title}</h2>
-            <h5>{subTitle}</h5>
-            <h6>{inquireNow}</h6>
-            <div className="books-grid">
-                {books.map(book => {
-                    return (
-                        <div key={book.id} className="book-card">
-                            <div className="book-image">
-                                <img src={book.imageSrc} alt="Doughnuts And Doom" />
-                            </div>
-                            <div className="book-title">{book.title}</div>
-                            <a href="#">View Book Details</a>
+        <section className="text-center mt-24">
+            <h2 className="text-4xl mb-10 text-gray-800">{title}</h2>
+            <h5 className="text-2xl mb-6">{subTitle}</h5>
+            <h6 className="text-xl mb-10">{inquireNow}</h6>
+            <div className="flex flex-wrap justify-center gap-8">
+                {books.map(book => (
+                    <div
+                        key={book.id}
+                        className="p-5 max-w-xs text-left bg-white shadow-md rounded-lg"
+                    >
+                        <div className="flex items-center justify-center bg-gray-200 rounded-lg p-2 mb-5">
+                            <img
+                                src={book.imageSrc}
+                                alt={book.title}
+                                className="w-full rounded-md"
+                            />
                         </div>
-                    );
-                })}
+                        <div className="text-white font-bold text-lg mb-5">{book.title}</div>
+                        <a href="#" className="text-blue-500 text-base font-bold">
+                            View Book Details
+                        </a>
+                    </div>
+                ))}
             </div>
         </section>
     );

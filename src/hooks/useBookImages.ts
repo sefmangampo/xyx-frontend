@@ -30,6 +30,7 @@ const useBookImages = () => {
     }, []);
 
     const getImageByName = (name: string): string | undefined => {
+        console.log('images', images);
         return images[name] || images['image_not_available.png'];
     };
 

@@ -6,11 +6,11 @@ import HeroSection from '@sections/hero-section/HeroSection';
 
 const HomePage: React.FC = () => {
     return (
-        <>
+        <div className="flex flex-col">
             <HeroSection />
             <ExploreSection />
             <FAQSection />
-        </>
+        </div>
     );
 };
 

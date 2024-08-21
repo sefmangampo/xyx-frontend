@@ -2,12 +2,9 @@ import React from 'react';
 import ReasonCard from './components/ReasonCard';
 
 import { boxIcon, helpIcon, pigIcon } from '@assets/icons';
-
 import { useReasonsTranslations } from '@helpers/translations';
 
-import './ReasonsToShopSection.css';
-
-function ReasonsToShopSection() {
+const ReasonsToShopSection: React.FC = () => {
     const {
         super: superTitle,
         reason,
@@ -41,19 +38,19 @@ function ReasonsToShopSection() {
     ];
 
     return (
-        <div className="reason-container">
-            <div className="reason-header">
-                <div className="super-title">{superTitle}</div>
-                <div className="reason-to-shop">{reason}</div>
+        <div className="mt-24 flex flex-col items-center justify-center">
+            <div className="w-4/5 flex flex-col items-start">
+                <div className="text-gold text-xl mb-2">{superTitle}</div>
+                <div className="text-white text-4xl font-bold text-center">{reason}</div>
             </div>
 
-            <div className="reason-cards">
-                {reasonsData.map(({ key, ...reason }) => {
-                    return <ReasonCard key={key} {...reason} />;
-                })}
+            <div className="flex flex-wrap gap-5 justify-center w-full">
+                {reasonsData.map(({ key, ...reason }) => (
+                    <ReasonCard key={key} {...reason} />
+                ))}
             </div>
         </div>
     );
-}
+};
 
 export default ReasonsToShopSection;

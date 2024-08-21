@@ -1,19 +1,17 @@
 import React from 'react';
 
 import CheapestSection from '@sections/cheapest-section/CheapestSection';
-import CommmitmentSection from '@sections/commitment-section/CommitmentSection';
+import CommitmentSection from '@sections/commitment-section/CommitmentSection';
 import ClientTrustSection from '@sections/client-trust-section/ClientTrustSection';
 
-import './HeroSection.css';
-
-function HeroSection() {
+const HeroSection: React.FC = () => {
     return (
-        <div className="hero-container">
+        <div className="bg-[url('/src/assets/backgrounds/banner.png')] bg-cover bg-center bg-no-repeat mt-24 h-auto flex flex-col">
             <CheapestSection />
-            <CommmitmentSection />
+            <CommitmentSection />
             <ClientTrustSection />
         </div>
     );
-}
+};
 
 export default HeroSection;

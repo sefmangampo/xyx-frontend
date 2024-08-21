@@ -4,11 +4,9 @@ import BooksSection from '@sections/books-section/BooksSection';
 import ReasonsToShopSection from '@sections/reason-to-shop-section/ReasonsToShopSection';
 import TestimonialSection from '@sections/testimonial-section/TestimonialsSection';
 
-import './ExploreSection.css';
-
 function ExploreSection() {
     return (
-        <div className="explore-container">
+        <div className="flex flex-col gap-12 bg-[url('/src/assets/backgrounds/explore.png')] bg-cover">
             <BooksSection />
             <ReasonsToShopSection />
             <TestimonialSection />

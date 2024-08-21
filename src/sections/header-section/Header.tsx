@@ -1,20 +1,18 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Banner from './banner/Banner';
 import Nav from './nav/Nav';
-import './Header.css';
 
 const Header: React.FC = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollTop, setLastScrollTop] = useState(0);
-    const location = useLocation(); // Get the current route
+    const location = useLocation();
+    const headerRef = useRef<HTMLDivElement>(null);
 
-    // Determine if we are on the search page
     const isSearchPage = location.pathname.includes('/search');
 
     const handleScroll = useCallback(() => {
-        if (isSearchPage) return; // Do nothing if on search page
-
+        if (isSearchPage) return;
         const currentScrollTop = window.scrollY;
 
         if (currentScrollTop > lastScrollTop) {
@@ -26,16 +24,28 @@ const Header: React.FC = () => {
         setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
     }, [lastScrollTop, isSearchPage]);
 
+    const handleClickOutside = (event: MouseEvent) => {
+        if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+            // Close the hamburger menu or perform any other action
+            setIsVisible(true);
+        }
+    };
+
     useEffect(() => {
         if (!isSearchPage) {
             window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
+            window.addEventListener('click', handleClickOutside);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+                window.removeEventListener('click', handleClickOutside);
+            };
         }
     }, [handleScroll, isSearchPage]);
 
     return (
         <div
-            className={`header-container ${isVisible ? 'visible' : 'hidden'} ${isSearchPage ? 'search-page' : ''}`}
+            ref={headerRef}
+            className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'} ${isSearchPage ? 'static transform-none' : ''}`}
         >
             <Banner />
             <Nav />

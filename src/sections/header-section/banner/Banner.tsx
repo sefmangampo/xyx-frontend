@@ -1,11 +1,17 @@
 import React from 'react';
-import './Banner.css';
 import { useHeroTranslations } from '@helpers/translations';
 
 function Banner() {
     const { saveUp500 } = useHeroTranslations();
 
-    return <div className="banner-container">{saveUp500}</div>;
+    return (
+        <div
+            className="bg-cover bg-center text-white font-bold text-center py-2 px-4"
+            style={{ backgroundImage: 'url(/src/assets/backgrounds/promo.png)' }}
+        >
+            {saveUp500}
+        </div>
+    );
 }
 
 export default Banner;

@@ -2,8 +2,6 @@ import React from 'react';
 import { useFAQTranslations } from '@helpers/translations';
 import AccordionGroup from '@components/accordion/AccordionGroup';
 
-import './FAQSection.css';
-
 function FAQSection() {
     const { title, dedicatedTitle, dedicatedDetails, otherDetails, otherTitle } =
         useFAQTranslations();
@@ -32,10 +30,12 @@ function FAQSection() {
     ];
 
     return (
-        <div className="faq-container">
-            <div className="content">
-                <div className="title">{title}</div>
-                <div className="accordion-group">
+        <div className="bg-gray-200 flex flex-col items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8">
+            <div className="flex flex-col items-center text-center">
+                <div className="text-black font-bold text-4xl md:text-3xl sm:text-2xl xs:text-xl">
+                    {title}
+                </div>
+                <div className="w-full md:w-3/4 lg:w-1/2">
                     <AccordionGroup data={faqData} />
                 </div>
             </div>
