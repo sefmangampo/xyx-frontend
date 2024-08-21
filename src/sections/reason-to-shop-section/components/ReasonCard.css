@@ -1,0 +1,89 @@
+/* Base Styles */
+.reason-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width to be responsive */
+    max-width: 400px; /* Ensure max-width for larger screens */
+    padding: 20px; /* Adjust padding for better spacing */
+    gap: 20px; /* Adjust gap for spacing between elements */
+    color: white;
+
+    img {
+        height: 50px; /* Adjust image size */
+        width: 50px; /* Adjust image size */
+        object-fit: contain; /* Maintain aspect ratio of the image */
+    }
+
+    .card-title {
+        font-size: 24px; /* Adjust font size */
+        font-weight: bold;
+    }
+
+    .card-details {
+        font-size: 20px; /* Adjust font size */
+    }
+}
+
+.reason-card-container .card-details {
+    line-height: 1.5;
+    font-size: 14px; /* Adjust font size */
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .reason-card-container {
+        padding: 15px; /* Reduce padding */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .reason-card-container img {
+        height: 45px; /* Slightly smaller image */
+        width: 45px; /* Slightly smaller image */
+    }
+
+    .card-title {
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .reason-card-container {
+        padding: 10px; /* Further reduce padding */
+        gap: 10px; /* Further reduce gap */
+
+        img {
+            height: 40px; /* Smaller image size */
+            width: 40px; /* Smaller image size */
+        }
+
+        .card-title {
+            font-size: 14px; /* Further reduce font size */
+        }
+
+        .card-details {
+            font-size: 12px; /* Further reduce font size */
+        }
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 480px) {
+    .reason-card-container {
+        padding: 5px; /* Minimal padding */
+        gap: 5px; /* Minimal gap */
+    }
+
+    .reason-card-container img {
+        height: 35px; /* Minimal image size */
+        width: 35px; /* Minimal image size */
+    }
+
+    .card-title {
+        font-size: 12px; /* Minimal font size */
+    }
+
+    .card-details {
+        font-size: 10px; /* Minimal font size */
+    }
+}

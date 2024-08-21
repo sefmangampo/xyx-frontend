@@ -1,0 +1,26 @@
+.footer-column {
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}

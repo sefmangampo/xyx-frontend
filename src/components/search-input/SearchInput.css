@@ -1,0 +1,87 @@
+/* Base Styles */
+.isbn-container {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    max-width: 400px;
+    font-size: 16px;
+    padding: 10px;
+    gap: 10px;
+    align-items: center; /* Align items vertically in the center */
+    background-color: #fff; /* Ensure background is white for better contrast */
+}
+
+.isbn-container input:focus {
+    border: none;
+    outline: none;
+}
+
+.isbn-input {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    color: grey;
+    padding: 5px; /* Add padding for better usability */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Search Icon Styles */
+.isbn-container img {
+    height: 24px; /* Set a base size for the icon */
+    width: 24px; /* Set a base size for the icon */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .isbn-container {
+        margin: 15px; /* Reduce margin for tablets */
+        max-width: 90%; /* Increase width for better fit */
+    }
+
+    .isbn-input {
+        font-size: 14px; /* Adjust font size for tablets */
+    }
+
+    .isbn-container img {
+        height: 20px; /* Adjust icon size for tablets */
+        width: 20px; /* Adjust icon size for tablets */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .isbn-container {
+        margin: 10px; /* Further reduce margin for small screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill container width */
+        padding: 8px; /* Reduce padding for small screens */
+    }
+
+    .isbn-input {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+
+    .isbn-container img {
+        height: 18px; /* Adjust icon size for small screens */
+        width: 18px; /* Adjust icon size for small screens */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .isbn-container {
+        margin: 5px; /* Minimal margin for extra small screens */
+        padding: 5px; /* Minimal padding for extra small screens */
+    }
+
+    .isbn-input {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .isbn-container img {
+        height: 16px; /* Further reduce icon size */
+        width: 16px; /* Further reduce icon size */
+    }
+}

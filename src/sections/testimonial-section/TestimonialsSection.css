@@ -1,0 +1,177 @@
+/* Container for the entire testimonial section */
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding for better spacing */
+
+    /* Styles for the client name */
+    .client-name {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 20px 0; /* Adjusted margin */
+        text-align: center; /* Center align text */
+    }
+
+    /* Styles for the client position */
+    .client-position {
+        color: lightskyblue;
+        font-size: 20px;
+        text-align: center; /* Center align text */
+    }
+
+    .head-shot-icon {
+        position: absolute;
+        top: -65px; /* Adjusted to fit better */
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%; /* Make headshot circular */
+            object-fit: cover; /* Maintain aspect ratio and cover the space */
+        }
+    }
+
+    /* Styles for the testimonial card */
+    .testimonial-card {
+        position: relative;
+        margin-top: 20px; /* Adjusted margin for better spacing */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%; /* Set to 90% for better responsiveness */
+    }
+
+    /* Styles for the headshot icon */
+
+    /* Styles for the testimonial content */
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+
+        background-color: rgb(6, 133, 212);
+        color: white;
+        width: 100%; /* Full width of the card */
+
+        border-radius: 10px;
+        align-items: center;
+        text-align: center; /* Center text */
+    }
+
+    .testimonial span {
+        margin-top: 50px;
+        width: 80%;
+        font-size: 23px; /* Adjust font size for readability */
+    }
+
+    /* Styles for the client branding */
+    .client-branding {
+        margin-top: 30px; /* Adjusted margin */
+        margin-bottom: 80px; /* Reduced bottom margin */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .client-logo-binance img {
+        height: 40px; /* Adjusted size for better fit */
+        width: 40px;
+    }
+
+    .ratings img {
+        height: 160px;
+        width: 200px;
+    }
+
+    .client-binance {
+        color: grey;
+        font-size: 24px;
+    }
+}
+
+/* Span within testimonial content */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 100%; /* Full width for small screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .head-shot-icon {
+        top: -40px; /* Adjust position for smaller screens */
+    }
+
+    .head-shot-icon img {
+        height: 60px; /* Adjusted size for smaller screens */
+        width: 60px;
+    }
+
+    .testimonial {
+        padding: 20px; /* Adjusted padding */
+    }
+
+    .client-name {
+        font-size: 30px; /* Reduced font size */
+        margin: 15px 0; /* Adjusted margin */
+    }
+
+    .client-position {
+        font-size: 14px; /* Adjusted font size */
+    }
+
+    .client-branding {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust gap */
+    }
+
+    .client-logo-binance img {
+        height: 30px; /* Adjusted size for smaller screens */
+        width: 30px;
+    }
+
+    .client-binance {
+        font-size: 20px; /* Reduced font size */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .testimonial-card {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    .head-shot-icon img {
+        height: 50px; /* Further adjust size */
+        width: 50px;
+    }
+
+    .testimonial {
+        padding: 15px; /* Further adjust padding */
+    }
+
+    .client-name {
+        font-size: 28px; /* Further reduce font size */
+    }
+
+    .client-position {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .client-logo-binance img {
+        height: 25px; /* Further adjust size */
+        width: 25px;
+    }
+
+    .client-binance {
+        font-size: 18px; /* Further reduce font size */
+    }
+}

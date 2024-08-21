@@ -1,7 +1,7 @@
-import Promo from '@assets/backgrounds/promo.png'
+import React from 'react';
 
 function Banner() {
-  return <></>
+    return <>h1 heello</>;
 }
 
-export default Banner
+export default Banner;

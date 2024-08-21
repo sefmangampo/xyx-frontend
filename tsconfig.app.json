@@ -1,32 +1,39 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react",
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
 
-    /*Path*/
-    "baseUrl": "./",
-    "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@helpers/*": ["src/helpers/*"],
-      "@components/*": ["src/components/*"]
-    }
-  },
-  "include": ["src"]
+        /* Paths */
+        "baseUrl": "./",
+        "paths": {
+            "@assets/*": ["src/assets/*"],
+            "@helpers/*": ["src/helpers/*"],
+            "@components/*": ["src/components/*"],
+            "@sections/*": ["src/sections/*"],
+            "@hooks/*": ["src/hooks/*"],
+            "@interfaces/*": ["src/interfaces/*"]
+        },
+
+        /* Additional Settings */
+        "esModuleInterop": true, // Add this line to handle module interoperability
+        "types": ["@types/jest", "@testing-library/jest-dom", "vitest/globals"] // Include necessary type definitions
+    },
+    "include": ["src", "src/assets.d.ts"]
 }

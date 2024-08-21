@@ -1,26 +1,17 @@
-import React from 'react'
-import Footer from '../sections/FooterSection/Footer'
-import BooksSection from '../sections/BooksSection/BooksSection'
-import ReasonsToShopSection from '../sections/ReasonsToShopSection/ReasonsToShoeSection'
-import TestimonialSection from '../sections/testimonialSection/TestimonialsSection'
-import CheapestSection from '../sections/CheapestSection/CheapestSection'
-import CommmitmentSection from '../sections/CommitmentSection/CommitmentSection'
-import ClientTrustSection from '../sections/ClientTrustSection/ClientTrustSection'
-import FAQSection from '../sections/FAQSection/FAQSection'
+import React from 'react';
+
+import FAQSection from '@sections/faq-section/FAQSection';
+import ExploreSection from '@sections/explore-section/ExploreSection';
+import HeroSection from '@sections/hero-section/HeroSection';
 
 const HomePage: React.FC = () => {
-  return (
-    <>
-      <CommmitmentSection />
-      <CheapestSection />
-      <ClientTrustSection />
-      <BooksSection />
-      <Footer />
-      <ReasonsToShopSection />
-      <TestimonialSection />
-      <FAQSection />
-    </>
-  )
-}
+    return (
+        <>
+            <HeroSection />
+            <ExploreSection />
+            <FAQSection />
+        </>
+    );
+};
 
-export default HomePage
+export default HomePage;

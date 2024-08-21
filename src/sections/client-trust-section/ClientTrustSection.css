@@ -1,0 +1,102 @@
+/* Base Styles */
+.trust-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 240px;
+}
+
+.clients {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 0 10px; /* Add some padding for better spacing */
+}
+
+.client-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.client-name {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Title */
+.title {
+    font-weight: 900;
+    font-size: 38px;
+    color: white;
+    margin-bottom: 36px;
+    text-align: center; /* Center the title */
+}
+
+.title_client {
+    color: gold;
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .trust-container {
+        height: 200px; /* Adjust height for tablets */
+    }
+
+    .title {
+        font-size: 32px; /* Adjust font size for tablets */
+        margin-bottom: 28px;
+    }
+
+    .client-name {
+        font-size: 16px; /* Adjust font size for client names */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .trust-container {
+        height: 180px; /* Adjust height for phones */
+    }
+
+    .title {
+        font-size: 28px; /* Adjust font size for phones */
+        margin-bottom: 20px;
+    }
+
+    .client-name {
+        font-size: 14px; /* Adjust font size for client names */
+    }
+
+    .clients {
+        width: 100%; /* Full width on smaller screens */
+        overflow-x: scroll; /* Enable horizontal scroll if needed */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .trust-container {
+        height: 160px; /* Further adjust height for very small screens */
+    }
+
+    .title {
+        font-size: 24px; /* Further adjust font size for very small screens */
+        margin-bottom: 16px;
+    }
+
+    .client-name {
+        font-size: 12px; /* Further adjust font size for client names */
+    }
+}

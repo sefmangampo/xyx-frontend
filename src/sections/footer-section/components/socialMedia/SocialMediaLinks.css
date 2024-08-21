@@ -1,0 +1,82 @@
+/* Base Styles */
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dee2e6;
+    padding-top: 20px;
+    color: #6c757d;
+    width: 90%;
+    margin: 0 auto; /* Center the footer within the viewport */
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #d9dee3;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    padding: 5px; /* Adjusted padding to better fit social icons */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.footer-social img {
+    height: 100%; /* Ensure the image fits within its container */
+    width: 100%; /* Ensure the image fits within its container */
+    object-fit: contain; /* Ensure the image scales without distortion */
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .footer-bottom {
+        width: 95%; /* Increase width for better fit on tablets */
+    }
+
+    .footer-social a {
+        height: 30px; /* Increase size of social icons */
+        width: 30px; /* Increase size of social icons */
+        margin-right: 15px; /* Increase spacing between social icons */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding: 10px; /* Reduce padding for small screens */
+    }
+
+    .footer-social {
+        margin-top: 10px; /* Add margin above social icons */
+    }
+
+    .footer-social a {
+        height: 35px; /* Increase size of social icons */
+        width: 35px; /* Increase size of social icons */
+        margin-right: 12px; /* Adjust spacing between social icons */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .footer-bottom {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    .footer-social a {
+        height: 40px; /* Increase size of social icons */
+        width: 40px; /* Increase size of social icons */
+        margin-right: 10px; /* Adjust spacing between social icons */
+    }
+}

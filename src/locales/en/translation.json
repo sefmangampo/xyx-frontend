@@ -1,61 +1,83 @@
 {
-  "common": {
-    "avail_discount": "Inquire us now to avail discounts!",
-    "save_up": "Save up to $500 per year on millions of book titles!"
-  },
-  "faq_section": {
-    "title": "Frequently Asked Question",
-    "dedicated": {
-      "header": "Dedicated customer support and help portal.",
-      "details": "With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress."
+    "common": {
+        "avail_discount": "Inquire us now to avail discounts!",
+        "save_up": "Save up to $500 per year on millions of book titles!"
     },
-    "others": {
-      "header": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed",
-      "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum"
-    }
-  },
-  "reason_section": {
-    "super": "LOREM IPSUM",
-    "reason": "3 Reasons To Shop With Us",
-    "free_shipping": {
-      "title": "All textbook rentals come with free return shipping.",
-      "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+    "faq_section": {
+        "title": "Frequently Asked Question",
+        "dedicated": {
+            "header": "Dedicated customer support and help portal.",
+            "details": "With our dedicated customer support team, you can rest easy knowing that we’re doing everything we can to save you time, money, and stress."
+        },
+        "others": {
+            "header": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed",
+            "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum"
+        }
     },
-    "dedicated_support": {
-      "title": "Dedicated customer support and help portal.",
-      "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+    "reason_section": {
+        "super": "LOREM IPSUM",
+        "reason": "3 Reasons To Shop With Us",
+        "free_shipping": {
+            "title": "All textbook rentals come with free return shipping.",
+            "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+        },
+        "dedicated_support": {
+            "title": "Dedicated customer support and help portal.",
+            "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+        },
+        "save_up": {
+            "title": "Buy or rent cheap textbooks & save up to $500 per year!",
+            "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+        }
     },
-    "save_up": {
-      "title": "Buy or rent cheap textbooks & save up to $500 per year!",
-      "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
-    }
-  },
-  "hero_section": {
-    "nav": {
-      "home": "Home",
-      "rent": "Rent Textbooks",
-      "buy": "Buy Textbooks",
-      "sell": "Sell Textbooks",
-      "contact": "Contact",
-      "search": "Search"
+    "hero_section": {
+        "nav": {
+            "home": "Home",
+            "rent": "Rent Textbooks",
+            "buy": "Buy Textbooks",
+            "sell": "Sell Textbooks",
+            "contact": "Contact",
+            "search": "Search"
+        },
+        "cheapest": {
+            "title": "The Cheapest Textbooks",
+            "sub_title": "Save Up To 90% On Millions Of Titles",
+            "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.",
+            "cta": "Get Started >"
+        },
+        "commitment": {
+            "title": "Our Commitment",
+            "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum",
+            "cta": "Learn More >"
+        },
+        "footer": {
+            "trusted": "Trusted By Awesome ",
+            "clients": "Clients"
+        }
     },
-    "cheapest": {
-      "title": "The Cheapest Textbooks",
-      "sub_title": "Save Up To 90% On Millions Of Titles",
-      "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.",
-      "cta": "Get Started >"
-    },
-    "commitment": {
-      "title": "Our Commitment",
-      "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum",
-      "cta": "Learn More >"
+    "books_section": {
+        "title": "Explore Our Books",
+        "sub_title": "With our dedicated customer support team, you can rest easy knowing that we're doing everything we can to save you time, money, and stress."
     },
     "footer": {
-      "trusted": "Trusted By Awesome Clients"
+        "left_area": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+        "email": "Email Address",
+        "menu": {
+            "menu": "Menu",
+            "shop_all": "Shop All",
+            "about_us": "About Us",
+            "community": "Community",
+            "faq": "FAQs"
+        },
+        "support": {
+            "support": "Support",
+            "shipping": "Shipping & Returns",
+            "help_and_faq": "Helps & FAQ",
+            "terms": "Terms & Conditions",
+            "privacy": "Privacy Policy",
+            "contact": "Contact",
+            "login": "Login"
+        },
+        "resources": "Resouces"
     }
-  },
-  "books_section": {
-    "title": "Explore Our Books",
-    "sub_title": "With our dedicated customer support team, you can rest easy knowing that we're doing everything we can to save you time, money, and stress."
-  }
 }

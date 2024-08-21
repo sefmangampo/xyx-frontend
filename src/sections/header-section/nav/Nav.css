@@ -1,0 +1,122 @@
+/* Base Styles */
+.nav-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto; /* Center container horizontally */
+}
+
+.nav-icon {
+    width: 200px;
+}
+
+.nav-icon img {
+    width: 200px;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 50px; /* Limit maximum height of logo */
+}
+
+.nav-lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-lang img {
+    height: 20px; /* Limit height of globe icon */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-cta {
+    display: flex;
+    margin-left: 30px;
+}
+
+.nav-links {
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.nav-links ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+    list-style-type: none;
+    font-size: 16px; /* Corrected font-size unit from '16x' to '16px' */
+    font-weight: 700;
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .nav-container {
+        width: 90%; /* Increase width for better fit on tablets */
+    }
+
+    .nav-links ul {
+        width: 80%; /* Adjust width for tablets */
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Adjust font size for tablets */
+    }
+
+    .nav-cta {
+        margin-left: 20px; /* Reduce margin for tablets */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start */
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .nav-lang {
+        margin-bottom: 10px; /* Add spacing below language section */
+    }
+
+    .nav-cta {
+        margin-left: 0; /* Remove left margin on small screens */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+
+    .nav-links {
+        width: 100%; /* Full width for nav-links */
+        justify-content: center; /* Center links horizontally */
+    }
+
+    .nav-links ul {
+        width: auto; /* Adjust width for small screens */
+        flex-direction: column; /* Stack list items vertically */
+        gap: 10px; /* Add spacing between list items */
+    }
+
+    .nav-links li {
+        font-size: 12px; /* Further reduce font size */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .nav-links ul {
+        gap: 5px; /* Reduce gap between list items */
+    }
+
+    .nav-links li {
+        font-size: 10px; /* Further reduce font size */
+    }
+}

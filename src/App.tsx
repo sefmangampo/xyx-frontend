@@ -1,7 +1,13 @@
-import AppRoutes from "./routes/AppRoutes";
+import React from 'react';
+import AppRoutes from './routes/AppRoutes';
+import { AppProvider } from './context/AppContext';
 
 function App() {
-  return <AppRoutes />;
+    return (
+        <AppProvider>
+            <AppRoutes />
+        </AppProvider>
+    );
 }
 
 export default App;

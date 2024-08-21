@@ -1,0 +1,9 @@
+.button-container {
+    input {
+        border: none;
+        background-color: rgb(33, 64, 131);
+        color: rgb(111, 128, 239);
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

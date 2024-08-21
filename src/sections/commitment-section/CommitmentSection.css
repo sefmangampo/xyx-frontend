@@ -1,0 +1,123 @@
+/* Base Styles */
+.commitment-container {
+    margin-top: 100px;
+    width: 90vw;
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.right-segment {
+    width: 600px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.commit-title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+    color: white;
+}
+
+.details {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.left-segment {
+    display: flex;
+
+    img {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .commitment-container {
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 50px; /* Reduce gap */
+    }
+
+    .right-segment {
+        width: 500px; /* Adjust width */
+    }
+
+    .title {
+        font-size: 35px; /* Adjust font size */
+    }
+
+    .details {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    img {
+        height: 500px; /* Adjust image size */
+        width: 500px; /* Adjust image size */
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+    .commitment-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 30px; /* Further reduce gap */
+        flex-direction: column; /* Stack segments vertically */
+        margin-top: 50px;
+    }
+
+    .right-segment {
+        width: 100%; /* Full width */
+        text-align: center; /* Center text */
+    }
+
+    .title {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    .details {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    img {
+        height: 400px; /* Adjust image size */
+        width: 400px; /* Adjust image size */
+    }
+}
+
+/* Extra Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .commitment-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 20px; /* Further reduce gap */
+        margin-top: 30px;
+    }
+
+    .right-segment {
+        width: 100%; /* Full width */
+    }
+
+    .title {
+        font-size: 24px; /* Further adjust font size */
+    }
+
+    .details {
+        font-size: 14px; /* Further adjust font size */
+    }
+
+    img {
+        height: 300px; /* Further adjust image size */
+        width: 300px; /* Further adjust image size */
+    }
+}

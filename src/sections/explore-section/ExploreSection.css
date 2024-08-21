@@ -1,0 +1,8 @@
+.explore-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    background-image: url('/src//assets/backgrounds/explore.png');
+    background-size: cover;
+}

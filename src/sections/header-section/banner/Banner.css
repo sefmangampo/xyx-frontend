@@ -1,0 +1,29 @@
+.banner-container {
+    background-image: url('/src/assets/backgrounds/promo.png');
+    background-size: cover; /* Use cover to ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    width: 100%;
+    font-weight: 700;
+    color: white;
+    height: 50px; /* Increased height for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text alignment */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .banner-container {
+        height: 40px; /* Adjust height for smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 35px; /* Further adjust height for very small screens */
+        font-size: 12px; /* Further reduce font size */
+    }
+}

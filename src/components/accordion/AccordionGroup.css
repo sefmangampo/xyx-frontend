@@ -1,0 +1,4 @@
+.accordion-group-container {
+    display: flex;
+    flex-direction: column;
+}
