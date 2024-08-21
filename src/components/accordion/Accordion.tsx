@@ -7,7 +7,7 @@ export interface AccordionProps {
 }
 const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [height, setHeight] = useState('0px');
+    const [_, setHeight] = useState('0px');
     const contentRef = useRef<HTMLDivElement>(null);
 
     const toggleAccordion = () => {
@@ -36,7 +36,6 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
             <div
                 ref={contentRef}
                 className={`overflow-hidden transition-all duration-300 ${isOpen ? 'p-2 max-h-screen' : 'p-0 max-h-0'}`}
-                style={{ maxHeight: height }}
             >
                 <div className="text-base">{content}</div>
             </div>

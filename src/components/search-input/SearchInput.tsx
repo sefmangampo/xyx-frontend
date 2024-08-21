@@ -1,30 +1,55 @@
-import React from 'react';
-import { searchIcon } from '@assets/icons';
-import { useHeroTranslations } from '@helpers/translations';
-import useSearch from '@hooks/useSearch';
+import React, { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '@hooks/useAppContext';
+
+import searchIcon from '@assets/icons/search.svg';
+
+const validateISBN = (value: string) => {
+    const cleaned = value.replace(/-/g, '');
+    const isISBN10 = /^[\d]{9}[\dXx]$/.test(cleaned);
+    const isISBN13 = /^[\d]{13}$/.test(cleaned);
+
+    return isISBN10 || isISBN13;
+};
+
+const formatInput = (value: string) => {
+    return value.replace(/[^0-9Xx-]/g, '');
+};
 
 const SearchInput: React.FC = () => {
-    const { navSearch } = useHeroTranslations();
-    const { isbn, setIsbn, isValid, loading, error } = useSearch();
+    const navigate = useNavigate();
+    const { state, dispatch } = useAppContext();
+    const { searchValue } = state;
+    const [localValue, setLocalValue] = useState(searchValue);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { value } = event.target;
-        setIsbn(value);
+        const value = event.target.value;
+        setLocalValue(formatInput(value));
     };
+
+    const handleSearch = useCallback(() => {
+        const value = localValue.trim();
+        if (validateISBN(value)) {
+            dispatch({ type: 'setSearchValue', payload: value });
+            dispatch({ type: 'setIsValid', payload: true });
+            navigate(`/search?isbn=${encodeURIComponent(value)}`);
+        } else {
+            dispatch({ type: 'setIsValid', payload: false });
+            dispatch({ type: 'setApiResult', payload: null });
+            navigate('/search');
+        }
+    }, [localValue, navigate, dispatch]);
 
     return (
         <div className="flex items-center gap-2 p-2 m-2 border border-gray-300 rounded-full max-w-md bg-white">
-            <img src={searchIcon} alt="Search" className="h-6 w-6 object-contain" />
             <input
                 type="text"
-                value={isbn}
+                value={localValue}
                 onChange={handleChange}
-                placeholder={navSearch}
-                className="flex-1 border-none bg-transparent text-gray-700 text-sm placeholder-gray-500 focus:outline-none"
-                maxLength={17}
+                placeholder="Search for a book"
+                className="flex-1 border-none bg-transparent text-gray-700 text-sm placeholder-gray-500 focus:outline-none px-3"
             />
-            {loading && <p className="text-gray-500 text-xs">Loading...</p>}
-            {error && <p className="text-red-500 text-xs">Error: {error}</p>}
+            <img src={searchIcon} alt="Search" className="cursor-pointer" onClick={handleSearch} />
         </div>
     );
 };

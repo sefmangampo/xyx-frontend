@@ -1,82 +1,47 @@
-import { useEffect, useState } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-
-const baseUrl = 'http://localhost:3000/api';
+import { useCallback } from 'react';
+import api from '../api/axios';
+import useValidateISBN from './useValidateISBN';
+import { useAppContext } from './useAppContext';
 
 const useSearch = () => {
     const { state, dispatch } = useAppContext();
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-    const [result, setResult] = useState<any>(null); // Define type based on your API response
-    const [debouncedValue, setDebouncedValue] = useState(state.searchValue);
+    const { validate } = useValidateISBN();
 
-    const navigate = useNavigate(); // Initialize useNavigate
+    const performSearch = useCallback(
+        async (isbn: string) => {
+            dispatch({ type: 'setSearchValue', payload: isbn });
+            dispatch({ type: 'setLoading', payload: true });
+            dispatch({ type: 'setError', payload: null });
+            dispatch({ type: 'setWarning', payload: null });
+            dispatch({ type: 'setApiResult', payload: null });
 
-    // Debounce effect
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedValue(state.searchValue);
-        }, 500); // 500ms delay
+            try {
+                if (validate(isbn)) {
+                    const response = await api.get(`/api/books/search`, {
+                        params: { isbn },
+                    });
 
-        return () => {
-            clearTimeout(handler); // Clear timeout if value changes (clean up)
-        };
-    }, [state.searchValue]);
-
-    useEffect(() => {
-        const validateISBN = (value: string) => {
-            const cleaned = value.replace(/\D/g, '');
-            return (
-                (cleaned.startsWith('978') && cleaned.length === 13) || // ISBN-13
-                cleaned.length === 10 // ISBN-10
-            );
-        };
-
-        const isValid = validateISBN(debouncedValue);
-        dispatch({ type: 'setIsValid', payload: isValid });
-
-        if (isValid) {
-            navigate(`/search?isbn=${encodeURIComponent(debouncedValue)}`); // Navigate to the search route
-            search(debouncedValue); // Trigger search after debounce
-        }
-    }, [debouncedValue, dispatch, navigate]);
-
-    const search = async (isbn: string) => {
-        console.log('Searching for ISBN:', isbn);
-
-        setLoading(true);
-        setError(null);
-
-        try {
-            // const response = await fetch(`${baseUrl}/books?isbn=${encodeURIComponent(isbn)}`);
-            const response = await fetch(`${baseUrl}/books/1`);
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+                    dispatch({ type: 'setApiResult', payload: response.data });
+                } else {
+                    dispatch({ type: 'setWarning', payload: 'Invalid ISBN format.' });
+                }
+            } catch (err) {
+                dispatch({ type: 'setError', payload: 'Failed to fetch data. Please try again.' });
+            } finally {
+                dispatch({ type: 'setLoading', payload: false });
             }
-            const data = await response.json();
-            console.log('DAta', data);
-            setResult(data); // Store the result in local state
-        } catch (err) {
-            if (err instanceof Error) {
-                setError(err.message);
-            } else {
-                setError('An unknown error occurred');
-            }
-            console.error('Error fetching API:', err);
-        } finally {
-            setLoading(false);
-        }
-    };
+        },
+        [validate, dispatch],
+    );
 
     return {
-        isbn: state.searchValue, // Provide state value
-        setIsbn: (value: string) => dispatch({ type: 'setSearchValue', payload: value }), // Provide dispatch function
+        searchValue: state.searchValue,
         isValid: state.isValid,
-        loading,
-        error,
-        result,
+        apiResult: state.apiResult,
+        loading: state.loading,
+        error: state.error,
+        warning: state.warning,
+        performSearch,
     };
 };
 

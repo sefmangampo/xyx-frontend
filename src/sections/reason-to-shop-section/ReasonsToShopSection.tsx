@@ -40,7 +40,7 @@ const ReasonsToShopSection: React.FC = () => {
     return (
         <div className="mt-24 flex flex-col items-center justify-center">
             <div className="w-4/5 flex flex-col items-start">
-                <div className="text-gold text-xl mb-2">{superTitle}</div>
+                <div className=" text-yellow-500 text-xl mb-2">{superTitle}</div>
                 <div className="text-white text-4xl font-bold text-center">{reason}</div>
             </div>
 

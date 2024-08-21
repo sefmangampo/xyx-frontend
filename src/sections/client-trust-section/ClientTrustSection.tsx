@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { useHeroTranslations } from '@helpers/translations';
-
 import {
     binaneLogo,
     bitcoinLogo,
@@ -10,6 +8,8 @@ import {
     tetherLogo,
     xrpLogo,
 } from '@assets/brands';
+
+import { useHeroTranslations } from '@helpers/translations';
 
 const clientData = [
     { key: 1, name: 'Binance', logo: binaneLogo },

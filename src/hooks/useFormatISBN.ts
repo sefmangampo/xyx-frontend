@@ -2,8 +2,6 @@ import { useCallback } from 'react';
 
 const useFormatISBN = () => {
     const formatISBN = useCallback((value: string) => {
-        console.log('value', value);
-
         const cleaned = value.replace(/\D/g, '');
 
         if (cleaned.startsWith('978') && cleaned.length > 3) {

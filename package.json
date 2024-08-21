@@ -13,11 +13,16 @@
     "dependencies": {
         "@testing-library/dom": "^10.4.0",
         "@types/react-router-dom": "^5.3.3",
+        "axios": "^1.7.4",
+        "dotenv": "^16.4.5",
+        "dotenv-expand": "^11.0.6",
         "i18next": "^23.13.0",
+        "lodash": "^4.17.21",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-i18next": "^15.0.1",
-        "react-router-dom": "^6.26.1"
+        "react-router-dom": "^6.26.1",
+        "vite-tsconfig-paths": "^5.0.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.9.0",
@@ -25,6 +30,7 @@
         "@testing-library/react": "^16.0.0",
         "@testing-library/user-event": "^14.5.2",
         "@types/jest": "^29.5.12",
+        "@types/lodash": "^4.17.7",
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "@typescript-eslint/eslint-plugin": "^8.2.0",
