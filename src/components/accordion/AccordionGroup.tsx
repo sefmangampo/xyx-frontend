@@ -9,7 +9,7 @@ const AccordionGroup: React.FC<AccordionGroupProps> = ({ data }) => {
     if (data.length === 0) return null;
 
     return (
-        <div className="flex flex-col">
+        <div className="flex w-full lg:w-[100vw]  items-center justify-center flex-col">
             {data.map(({ key, ...accordionItem }) => (
                 <Accordion key={key} {...accordionItem} />
             ))}

@@ -7,7 +7,7 @@ const Layout: React.FC = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
             <HeaderSection />
-            <div className="mt-24 flex-1 flex items-center justify-center sm:mt-12">
+            <div className=" flex-1 flex items-center justify-center ">
                 <Outlet />
             </div>
 

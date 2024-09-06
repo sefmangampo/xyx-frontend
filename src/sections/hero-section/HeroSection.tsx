@@ -6,7 +6,7 @@ import ClientTrustSection from '@sections/client-trust-section/ClientTrustSectio
 
 const HeroSection: React.FC = () => {
     return (
-        <div className="bg-[url('/src/assets/backgrounds/banner.png')] bg-cover bg-center bg-no-repeat mt-24 h-auto flex flex-col">
+        <div className="bg-[url('/src/assets/backgrounds/banner.png')] bg-cover bg-center bg-no-repeat h-auto flex flex-col">
             <CheapestSection />
             <CommitmentSection />
             <ClientTrustSection />

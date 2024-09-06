@@ -20,9 +20,9 @@ function Footer() {
         useFooterOptions();
 
     return (
-        <footer className="bg-gray-100 flex flex-col w-full font-sans">
-            <div className="flex flex-col lg:flex-row justify-center items-start lg:items-center w-full lg:w-4/5 mx-auto my-5 px-4 lg:px-12">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between w-full mb-6 lg:mb-0">
+        <footer className="bg-gray-100 flex flex-col w-full lg:h-[70vh] justify-center  items-startfont-sans">
+            <div className="flex flex-col lg:flex-row justify-center items-start lg:items-center w-full  mx-auto my-5 px-4 lg:px-12">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between w-full mb-6 gap-10 lg:mb-0">
                     <div className="flex flex-col items-center lg:items-start lg:w-1/4 mb-6 lg:mb-0">
                         <img
                             src={AppLogo}
@@ -32,21 +32,23 @@ function Footer() {
                         <p className="text-gray-600 max-w-xs text-center lg:text-left">
                             {footerText}
                         </p>
-                        <form className="flex flex-col md:flex-row mt-5 w-full max-w-xs">
+                        <form >
+                            <div className="flex flex-row items-stretch justify-between md:flex-row mt-5 w-full max-w-xs pl-4 pr-4 py-2 border border-violet-600 bg-white rounded-2xl">
                             <input
                                 type="email"
                                 placeholder={emailAddress}
-                                className="p-2 border border-gray-300 rounded-l-md w-full md:w-3/4 mb-2 md:mb-0"
+                                className=" border-none w-full md:w-3/4 mb-2 md:mb-0"
                             />
                             <button
                                 type="submit"
-                                className="p-2 bg-blue-500 text-white border-none rounded-r-md cursor-pointer w-full md:w-auto"
+                                className=" text-black border-none rounded-r-md cursor-pointer w-full md:w-auto"
                             >
                                 {'>'}
                             </button>
+                            </div>
                         </form>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:w-3/4 gap-8 lg:gap-12">
+                    <div className="flex flex-col lg:flex-row lg:w-3/4 gap-8 lg:gap-10">
                         <FooterColumn data={menuOptions} />
                         <FooterColumn data={supportOptions} />
                         <FooterColumn data={resourcesOptions} />

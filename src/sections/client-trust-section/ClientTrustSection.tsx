@@ -24,12 +24,12 @@ const ClientTrustSection: React.FC = () => {
     const { trusted, clients } = useHeroTranslations();
 
     return (
-        <div className="flex flex-col items-center w-full h-auto  p-4">
-            <div className="text-white text-center font-bold text-3xl mb-9">
-                <span className="text-yellow-500">{trusted}</span>
+        <div className="flex flex-col justify-center items-center w-full  h-[60vh] lg:h-[40vh]  lg:p-4">
+            <div className="text-white text-center font-bold text-3xl  items-center justify-center mb-9">
+                <span className="text-yellow-500 ">{trusted}</span>
                 <span className="text-gold">{clients}</span>
             </div>
-            <div className="flex flex-wrap justify-center md:justify-between gap-6 w-full md:w-[80%] px-2">
+            <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 w-[100vw] md:w-[80%] lg:px-2">
                 {clientData.map(({ key, name, logo }) => (
                     <div
                         key={key}

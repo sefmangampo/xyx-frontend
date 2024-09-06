@@ -42,6 +42,7 @@ const SearchInput: React.FC = () => {
 
     return (
         <div className="flex items-center gap-2 p-2 m-2 border border-gray-300 rounded-full max-w-md bg-white">
+            <img src={searchIcon} alt="Search" className="cursor-pointer" onClick={handleSearch} />
             <input
                 type="text"
                 value={localValue}
@@ -49,7 +50,7 @@ const SearchInput: React.FC = () => {
                 placeholder="Search for a book"
                 className="flex-1 border-none bg-transparent text-gray-700 text-sm placeholder-gray-500 focus:outline-none px-3"
             />
-            <img src={searchIcon} alt="Search" className="cursor-pointer" onClick={handleSearch} />
+            
         </div>
     );
 };

@@ -20,5 +20,6 @@ export const useHeroTranslations = () => {
         navBuy: t('hero_section.nav.buy'),
         navSell: t('hero_section.nav.sell'),
         navContact: t('hero_section.nav.contact'),
+        inquireNow: t('common.avail_discount'),
     };
 };

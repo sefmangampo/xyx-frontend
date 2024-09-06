@@ -21,7 +21,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
     }, [isOpen]);
 
     return (
-        <div>
+        <div className='flex flex-col w-[90vw]'>
             <div
                 onClick={toggleAccordion}
                 className="cursor-pointer p-2 flex justify-between items-center select-none"

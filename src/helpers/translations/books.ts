@@ -7,5 +7,6 @@ export const useBooksTranslations = () => {
         title: t('books_section.title'),
         subTitle: t('books_section.sub_title'),
         inquireNow: t('common.avail_discount'),
+        buttonCaption: t('books_section.book_caption')
     };
 };

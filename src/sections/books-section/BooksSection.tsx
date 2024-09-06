@@ -3,11 +3,11 @@ import axios from 'axios';
 import { useBooksTranslations } from '@helpers/translations';
 import { BookResult } from '@interfaces/book';
 import useBookImages from '@hooks/useBookImages';
-const isbnList = ['9781603093989', '9781603095099', '9781649360809'];
+const isbnList = [ '9781649360809', '9781603095099', '9781603093989'];
 
 function BooksSection() {
     const [books, setBooks] = useState<BookResult[]>([]);
-    const { title, subTitle, inquireNow } = useBooksTranslations();
+    const { title, subTitle, buttonCaption } = useBooksTranslations();
 
     const { getImageByName } = useBookImages();
 
@@ -33,26 +33,26 @@ function BooksSection() {
         fetchBooks();
     }, []);
     return (
-        <section className="text-center mt-24">
-            <h2 className="text-4xl mb-10 text-gray-800">{title}</h2>
-            <h5 className="text-2xl mb-6">{subTitle}</h5>
-            <h6 className="text-xl mb-10">{inquireNow}</h6>
-            <div className="flex flex-wrap justify-center gap-8">
+        <section className="flex flex-col justify-center items-center text-center mt-24">
+            <h2 className="flex text-4xl lg:text-6xl mb-10 font-bold text-gray-800 ">{title}</h2>
+            <h5 className="flex text-2xl mb-6 w-[70vw]">{subTitle}</h5>
+            {/* <h6 className="text-xl mb-10">{inquireNow}</h6> */}
+            <div className="flex flex-wrap items-center align-middle w-full justify-center gap-20">
                 {books.map(book => (
                     <div
                         key={book.isbn_13}
-                        className="p-5 max-w-xs text-left bg-white shadow-md rounded-lg"
+                        className="flex flex-col  max-w-sm text-left"
                     >
-                        <div className="flex items-center justify-center bg-gray-200 rounded-lg p-2 mb-5">
+                        <div className="flex items-center justify-center bg-white bg-opacity-50 rounded-lg p-2 mb-5">
                             <img
                                 src={getImageByName(book.image)}
                                 alt={book.title}
                                 className="w-full rounded-md"
                             />
                         </div>
-                        <div className="text-gray-800 font-bold text-lg mb-5">{book.title}</div>
-                        <a href="#" className="text-blue-500 text-base font-bold">
-                            View Book Details
+                        <div className="text-white font-bold text-3xl mb-5">{book.title}</div>
+                        <a href="#" className="text-blue-300 text-base font-bold">
+                            {buttonCaption}
                         </a>
                     </div>
                 ))}

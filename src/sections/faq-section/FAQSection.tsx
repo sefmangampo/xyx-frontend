@@ -30,12 +30,12 @@ function FAQSection() {
     ];
 
     return (
-        <div className="bg-gray-200 flex flex-col items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 lg:py-20">
+        <div className="bg-gray-200 flex flex-col items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 py-20">
             <div className="flex flex-col items-center text-start">
-                <div className="text-black mb-10 font-bold text-4xl md:text-3xl sm:text-2xl xs:text-xl lg:text-s">
+                <div className="text-black mb-10 font-bold lg:text-4xl md:text-3xl text-2xl lg:text-s">
                     {title}
                 </div>
-                <div className="w-full md:w-3/4 lg:w-1/2">
+                <div className="w-full md:w-3/4 lg:w-1/2 flex">
                     <AccordionGroup data={faqData} />
                 </div>
             </div>

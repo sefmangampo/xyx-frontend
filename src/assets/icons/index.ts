@@ -1,6 +1,6 @@
 export { default as boxIcon } from './box.svg';
 export { default as collapseIcon } from './collapse.svg';
-export { default as curvePointerIcon } from './collapse.svg';
+export { default as curvePointerIcon } from './curve_pointer.svg';
 export { default as globeIcon } from './globe.svg';
 export { default as helpIcon } from './help.svg';
 export { default as heroIcon } from './hero_illustration.svg';

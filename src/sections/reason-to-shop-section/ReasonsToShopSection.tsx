@@ -38,13 +38,13 @@ const ReasonsToShopSection: React.FC = () => {
     ];
 
     return (
-        <div className="mt-24 flex flex-col items-center justify-center">
-            <div className="w-4/5 flex flex-col items-start">
-                <div className=" text-yellow-500 text-xl mb-2">{superTitle}</div>
-                <div className="text-white text-4xl font-bold text-center">{reason}</div>
+        <div className="mt-24 w-[100vw] flex flex-col items-center justify-center">
+            <div className="w-full flex flex-col items-start">
+                <div className=" text-yellow-500 lg:ml-28 lg:text-left text-center w-full text-xl mb-2">{superTitle}</div>
+                <div className="text-white lg:ml-28 lg:text-4xl text-2xl w-full font-bold text-center lg:text-left">{reason}</div>
             </div>
 
-            <div className="flex flex-wrap gap-5 justify-center w-full">
+            <div className="flex flex-wrap gap-5 justify-center w-full mt-10">
                 {reasonsData.map(({ key, ...reason }) => (
                     <ReasonCard key={key} {...reason} />
                 ))}

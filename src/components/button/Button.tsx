@@ -8,7 +8,7 @@ interface ButtonProps {
     width?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, height = '40px', width = '100px' }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick, height = '60px', width = '100px' }) => {
     return (
         <div className="button-container">
             <input type="button" value={label} onClick={onClick} style={{ height, width }} />

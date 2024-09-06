@@ -21,7 +21,7 @@ const SearchPage: React.FC = () => {
     }, [search]);
 
     return (
-        <div className="flex flex-col items-center justify-center gap-12 mx-4 my-20 max-w-screen-md mx-auto">
+        <div className="flex flex-col items-center justify-center gap-12 mx-4 my-20 max-w-screen-md ">
             <div className="text-3xl font-bold w-full text-center hidden lg:block">
                 Search Result
             </div>
