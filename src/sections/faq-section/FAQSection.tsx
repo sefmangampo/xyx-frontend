@@ -30,7 +30,7 @@ function FAQSection() {
     ];
 
     return (
-        <div className="bg-gray-200 flex flex-col items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 py-20">
+        <div className="bg-gray-200 flex flex-col items-center justify-center px-4 sm:px-5 md:px-6 py-20">
             <div className="flex flex-col items-center text-start">
                 <div className="text-black mb-10 font-bold lg:text-4xl md:text-3xl text-2xl lg:text-s">
                     {title}

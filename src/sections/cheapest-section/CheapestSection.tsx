@@ -10,7 +10,7 @@ function CheapestSection() {
     const clickHandler = () => {};
 
     return (
-        <div className="flex flex-col lg:flex-row items-center h-[100vh]  lg:h-[90vh] justify-center gap-16 px-6 sm:px-10 lg:px-20  mx-auto max-w-screen-xl">
+        <div className="flex flex-col lg:flex-row items-center h-[100vh]  lg:h-[90vh] justify-center gap-16 px-6 sm:px-10 lg:px-20  mx-auto w-full">
             <div className="flex flex-col items-start gap-8 text-black w-full max-w-xs sm:max-w-sm lg:max-w-md">
                 <div className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-none">
                     {cheapestTitle}

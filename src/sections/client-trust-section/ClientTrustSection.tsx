@@ -26,14 +26,14 @@ const ClientTrustSection: React.FC = () => {
     return (
         <div className="flex flex-col justify-center items-center w-full  h-[60vh] lg:h-[40vh]  lg:p-4">
             <div className="text-white text-center font-bold text-3xl  items-center justify-center mb-9">
-                <span className="text-yellow-500 ">{trusted}</span>
-                <span className="text-gold">{clients}</span>
+                <span className="">{trusted}</span>
+                <span className="text-yellow-500 ">{clients}</span>
             </div>
             <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 w-[100vw] md:w-[80%] lg:px-2">
                 {clientData.map(({ key, name, logo }) => (
                     <div
                         key={key}
-                        className="flex flex-col items-center w-1/3 sm:w-1/4 md:w-auto gap-3"
+                        className="flex flex-col lg:flex-row items-center w-1/3 sm:w-1/4 md:w-auto gap-3"
                     >
                         <img src={logo} alt={`${name} logo`} className="h-10 w-10" />
                         <div className="text-white font-semibold text-lg">{name}</div>

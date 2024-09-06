@@ -21,10 +21,10 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
     }, [isOpen]);
 
     return (
-        <div className='flex flex-col w-[90vw]'>
+        <div className='flex flex-col w-[90vw] lg:w-[50vw]'>
             <div
                 onClick={toggleAccordion}
-                className="cursor-pointer p-2 flex justify-between items-center select-none"
+                className="cursor-pointer p-2 w-full flex justify-between items-center select-none"
             >
                 <div className="text-xl font-bold text-purple-800">{title}</div>
                 <img

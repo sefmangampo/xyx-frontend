@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useBooksTranslations } from '@helpers/translations';
 import { BookResult } from '@interfaces/book';
 import useBookImages from '@hooks/useBookImages';
+import { Link } from 'react-router-dom'; 
 const isbnList = [ '9781649360809', '9781603095099', '9781603093989'];
 
 function BooksSection() {
@@ -51,9 +52,9 @@ function BooksSection() {
                             />
                         </div>
                         <div className="text-white font-bold text-3xl mb-5">{book.title}</div>
-                        <a href="#" className="text-blue-300 text-base font-bold">
+                        <Link to={`/search?isbn=${book.isbn_13}`} className="text-blue-300 text-base font-bold">
                             {buttonCaption}
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

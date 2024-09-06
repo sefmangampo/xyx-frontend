@@ -14,6 +14,11 @@ const SearchPage: React.FC = () => {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
+    useEffect(() => {
         const isbnFromUrl = getQueryParam('isbn');
         if (isbnFromUrl) {
             performSearch(isbnFromUrl);
@@ -22,7 +27,7 @@ const SearchPage: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center justify-center gap-12 mx-4 my-20 max-w-screen-md ">
-            <div className="text-3xl font-bold w-full text-center hidden lg:block">
+            <div className="text-3xl font-bold w-full text-center lg:text-left hidden lg:block">
                 Search Result
             </div>
             <div className="w-full lg:hidden mb-4">

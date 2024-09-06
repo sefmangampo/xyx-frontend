@@ -8,13 +8,13 @@ function SocialMediaLinks() {
             <div className="flex space-x-2 mt-2 md:mt-0">
                 <a
                     href="#"
-                    className="flex justify-center items-center bg-gray-200 h-6 w-6 rounded-full p-1"
+                    className="flex justify-center items-center bg-gray-200 h-10 w-10 rounded-full p-1"
                 >
                     <img src={fbLogo} alt="fb logo" className="h-full w-full object-contain" />
                 </a>
                 <a
                     href="#"
-                    className="flex justify-center items-center bg-gray-200 h-6 w-6 rounded-full p-1"
+                    className="flex justify-center items-center bg-gray-200 h-10 w-10 rounded-full p-1"
                 >
                     <img
                         src={twitterLogo}
@@ -24,7 +24,7 @@ function SocialMediaLinks() {
                 </a>
                 <a
                     href="#"
-                    className="flex justify-center items-center bg-gray-200 h-6 w-6 rounded-full p-1"
+                    className="flex justify-center items-center bg-gray-200 h-10 w-10 rounded-full p-1"
                 >
                     <img
                         src={linkedInLogo}

@@ -1,0 +1,84 @@
+{
+  "common": {
+      "avail_discount": "¡Consúltanos ahora para obtener descuentos!",
+      "save_up": "¡Ahorra hasta $500 por año en millones de títulos de libros!"
+  },
+  "faq_section": {
+      "title": "Preguntas Frecuentes",
+      "dedicated": {
+          "header": "Soporte al cliente dedicado y portal de ayuda.",
+          "details": "Con nuestro equipo de soporte al cliente dedicado, puedes estar tranquilo sabiendo que estamos haciendo todo lo posible para ahorrarte tiempo, dinero y estrés."
+      },
+      "others": {
+          "header": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed",
+          "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum"
+      }
+  },
+  "reason_section": {
+      "super": "LOREM IPSUM",
+      "reason": "3 Razones para Comprar con Nosotros",
+      "free_shipping": {
+          "title": "Todos los alquileres de libros de texto vienen con envío de devolución gratuito.",
+          "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+      },
+      "dedicated_support": {
+          "title": "Soporte al cliente dedicado y portal de ayuda.",
+          "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+      },
+      "save_up": {
+          "title": "¡Compra o alquila libros de texto baratos y ahorra hasta $500 por año!",
+          "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore Stet clita kasd gubergren, no sea takimata."
+      }
+  },
+  "hero_section": {
+      "nav": {
+          "home": "Inicio",
+          "rent": "Alquilar Libros de Texto",
+          "buy": "Comprar Libros de Texto",
+          "sell": "Vender Libros de Texto",
+          "contact": "Contacto",
+          "search": "Buscar"
+      },
+      "cheapest": {
+          "title": "Los Libros de Texto Más Baratos",
+          "sub_title": "Ahorra Hasta el 90% en Millones de Títulos",
+          "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.",
+          "cta": "Comenzar >"
+      },
+      "commitment": {
+          "title": "Nuestro Compromiso",
+          "details": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum",
+          "cta": "Aprende Más >"
+      },
+      "footer": {
+          "trusted": "Confiado Por Increíbles ",
+          "clients": "Clientes"
+      }
+  },
+  "books_section": {
+      "title": "Explora Nuestros Libros",
+      "sub_title": "Con nuestro equipo de soporte al cliente dedicado, puedes estar tranquilo sabiendo que estamos haciendo todo lo posible para ahorrarte tiempo, dinero y estrés.",
+      "book_caption": "Ver Detalles del Libro >"
+  },
+  "footer": {
+      "left_area": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod",
+      "email": "Dirección de Correo Electrónico",
+      "menu": {
+          "menu": "Menú",
+          "shop_all": "Comprar Todo",
+          "about_us": "Sobre Nosotros",
+          "community": "Comunidad",
+          "faq": "Preguntas Frecuentes"
+      },
+      "support": {
+          "support": "Soporte",
+          "shipping": "Envíos y Devoluciones",
+          "help_and_faq": "Ayuda y Preguntas Frecuentes",
+          "terms": "Términos y Condiciones",
+          "privacy": "Política de Privacidad",
+          "contact": "Contacto",
+          "login": "Iniciar Sesión"
+      },
+      "resources": "Recursos"
+  }
+}

@@ -47,7 +47,7 @@ const SearchInput: React.FC = () => {
                 type="text"
                 value={localValue}
                 onChange={handleChange}
-                placeholder="Search for a book"
+                placeholder="Search"
                 className="flex-1 border-none bg-transparent text-gray-700 text-sm placeholder-gray-500 focus:outline-none px-3"
             />
             
